@@ -126,6 +126,20 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
 .steps li:last-child{padding-bottom:0}
 .steps b{display:block}
 
+/* デザイン案のキャプチャ。高さは実寸とずれても .shot img{height:auto} で崩れない */
+.shot{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff}
+.shot img{display:block; width:100%; height:auto}
+.shot-cap{display:flex; justify-content:space-between; align-items:center; gap:14px;
+  padding:12px 16px; border-top:1px solid var(--line); flex-wrap:wrap}
+.shot-cap .nm{font-weight:800; color:var(--navy)}
+.shot-cap a{background:var(--navy); color:#fff; text-decoration:none; padding:8px 16px;
+  border-radius:8px; font-size:13.5px; font-weight:700; white-space:nowrap}
+.pts{list-style:none; margin:16px 0 0; padding:0; display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px}
+.pts li{background:#f7fafc; border:1px solid var(--line); border-radius:10px;
+  padding:12px 14px; font-size:13.5px}
+.pts b{display:block; color:var(--navy); font-size:14px; margin-bottom:2px}
+
 .foot{color:var(--muted); font-size:13px; text-align:center; margin-top:36px;
   padding-top:22px; border-top:1px solid var(--line)}
 
@@ -159,6 +173,7 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
       <li><a href="#s01">いまのサイトで気になった3点</a></li>
       <li><a href="#s02">ページの構成案（間取り図）</a></li>
       <li><a href="#s03">トップページの画面の並び</a></li>
+      <li><a href="#s03b">デザイン案</a></li>
       <li><a href="#s04">ご確認・ご用意いただきたいこと</a></li>
       <li><a href="#s05">料金</a></li>
       <li><a href="#s06">これからの進め方</a></li>
@@ -168,7 +183,7 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
   <section class="sec" id="s00">
     <span class="sec-no">00</span>
     <h2>はじめに ― 今回のねらい</h2>
-    <p class="lede">この資料は、デザインを決めるものではありません。家づくりでいう「間取り図」を決めていただくためのものです。</p>
+    <p class="lede">家づくりでいう「間取り図」と、トップページの見た目を1案、あわせてご覧いただく資料です。</p>
     <div class="card">
       <p>今回のリニューアルは、<b>外国人材事業に絞り、会社の信用づくりを目的とする</b>方向で組み立てました。
         保育園・放課後等デイサービスは、それぞれのサイトにお任せする形です。</p>
@@ -288,6 +303,33 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
     </div>
   </section>
 
+  <section class="sec" id="s03b">
+    <span class="sec-no">03b</span>
+    <h2>デザイン案</h2>
+    <p class="lede">上の並びを、実際の見た目にしたものです。まずは1案をご覧ください。</p>
+    <div class="card">
+      <div class="shot">
+        <img src="img/preview-a.jpg" alt="デザイン案Aのトップページ" width="1280" height="860">
+        <div class="shot-cap">
+          <span class="nm">案A ― きっちり</span>
+          <a href="https://k-matsumoto527.github.io/aandk-design/plan-a.html" target="_blank" rel="noopener">実物を見る</a>
+        </div>
+      </div>
+      <p style="margin-top:18px">御社のお客さまは、外国人材の受入れを検討している企業のご担当者です。
+        やわらかさや親しみよりも、<b>確かさが伝わること</b>を優先しました。
+        濃紺と細い罫線で整え、丸みや影は使っていません。</p>
+      <ul class="pts">
+        <li><b>登録番号を2か所に</b>最上部の帯と、トップの見出しの下。信用の要になる情報です。</li>
+        <li><b>いまのロゴをそのまま</b>現在お使いの青いマークを、そのまま左上に置いています。</li>
+        <li><b>いまのお写真を活用</b>提携先での授業風景を、トップと提携機関の欄に使いました。</li>
+        <li><b>数字を上のほうに</b>受入企業数・ご紹介人数などをいただき次第、入れ替えます。</li>
+      </ul>
+      <p style="margin-top:16px; font-size:13.5px; color:var(--muted)">
+        ※数字・代表のお写真・お知らせの一部は仮のものです。いただき次第、差し替えます。<br>
+        ※この案でよろしければこのまま進めます。方向性を変えたい場合は、別の案をお作りします。</p>
+    </div>
+  </section>
+
   <section class="sec" id="s04">
     <span class="sec-no">04</span>
     <h2>ご確認・ご用意いただきたいこと</h2>
@@ -295,7 +337,7 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
     <div class="card">
       <h3>お決めいただきたいこと</h3>
       <ol class="asks">
-        <li><b>この構成（9ページ）で進めてよいか</b>
+        <li><b>この構成（9ページ）とデザイン案Aで進めてよいか</b>
           <div class="why">ページの増減・順番・名称について、ご要望があればこの段階でお伺いします。</div></li>
         <li><b>有料職業紹介事業の許可番号</b>
           <div class="why">現在のサイトに記載が見当たりませんでした。取得されている場合は掲載させてください。信用の面で効きます。</div></li>
@@ -342,7 +384,7 @@ td.num{text-align:right; font-variant-numeric:tabular-nums}
     <div class="card">
       <ol class="steps">
         <li><b>構成のご確認</b>この資料の9ページで進めてよいか、お聞かせください。</li>
-        <li><b>デザイン案のご提示</b>トップページの見た目を数案お作りし、お選びいただきます。</li>
+        <li><b>デザインのご確認</b>03bの案でよろしいか、方向性を変えたほうがよいかをお聞かせください。</li>
         <li><b>原稿と写真のご用意</b>04でお願いした素材を、順次いただきます。揃った分から作り始められます。</li>
         <li><b>制作とご確認</b>実際に開けるURLでご覧いただきながら進めます。ご確認は何度でも承ります。</li>
         <li><b>公開</b>ドメインの切り替えと通信の保護（https）をあわせて行います。ここから月額が発生します。</li>
